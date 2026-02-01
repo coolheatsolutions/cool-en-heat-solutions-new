@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cool en Heat Solutions | Airco Installatie Vlaanderen</title>
+
+<meta name="description" content="Professionele airco installatie in Vlaanderen. Cool en Heat Solutions – meer dan 20 jaar ervaring.">
+<meta name="author" content="Cool en Heat Solutions">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container header-content">
+    <div class="logo">Cool<span>en</span>Heat</div>
+
+    <nav class="nav">
+      <a href="#about">Over ons</a>
+      <a href="#experience">Ervaring</a>
+      <a href="#location">Locatie</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="burger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="about">
+  <div class="container hero-content">
+    <h1>Perfect klimaat.<br><span>Elke dag opnieuw.</span></h1>
+
+    <p>
+      Al meer dan 20 jaar brengt <strong>Cool en Heat Solutions</strong> comfort
+      in woningen en bedrijven in heel Vlaanderen.
+      Wij installeren airconditioningsystemen die stilte, efficiëntie
+      en betrouwbaarheid combineren.
+    </p>
+
+    <p>
+      Gevestigd in Wiekevorst, provincie Antwerpen,
+      en al twee decennia een vaste waarde in de sector.
+    </p>
+
+    <button class="cta-btn">Offerte aanvragen</button>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience" id="experience">
+  <div class="container experience-grid">
+    <div class="experience-text">
+      <h2>Meer dan 20 jaar vakmanschap</h2>
+      <p>
+        Onze ervaren installateurs werken uitsluitend met kwaliteitsmerken
+        zoals <strong>Toshiba, Daikin, Mitsubishi en Sinclair</strong>.
+      </p>
+      <p>
+        Elk project wordt zorgvuldig geanalyseerd en op maat uitgevoerd,
+        met oog voor comfort, energie-efficiëntie en esthetiek.
+      </p>
+    </div>
+
+    <div class="image-placeholder">
+      Installatie foto
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location" id="location">
+  <div class="container">
+    <h2>Actief in heel Vlaanderen</h2>
+    <p>
+      Vanuit <strong>Wiekevorst (Antwerpen)</strong> bedienen wij klanten
+      in de volledige Vlaamse regio.
+    </p>
+
+    <iframe
+      src="https://www.google.com/maps?q=Wiekevorst,Antwerpen&output=embed"
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-info">
+      <h2>Heeft u een vraag?</h2>
+      <p>
+        Wenst u advies of een vrijblijvende offerte?
+        Neem gerust contact met ons op.
+      </p>
+    </div>
+
+    <!-- FORM (Formspree – no backend) -->
+    <form
+      class="contact-form"
+      action="https://formspree.io/f/YOUR_ID"
+      method="POST"
+    >
+      <input type="text" name="name" placeholder="Naam" required>
+      <input type="email" name="email" placeholder="E-mail" required>
+      <textarea name="message" placeholder="Uw vraag" required></textarea>
+
+      <!-- Anti-spam -->
+      <input type="text" name="_gotcha" style="display:none">
+      <input type="hidden" name="_subject" value="Nieuwe aanvraag via website">
+
+      <label class="gdpr">
+        <input type="checkbox" required>
+        Ik ga akkoord met het privacybeleid
+      </label>
+
+      <button type="submit">Versturen</button>
+    </form>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="container">
+    <h2>Wat onze klanten zeggen</h2>
+
+    <div class="reviews-grid">
+      <div class="review">★★★★★ Perfecte service en nette afwerking</div>
+      <div class="review">★★★★★ Zeer professioneel en betrouwbaar</div>
+      <div class="review">★★★★★ Topkwaliteit installatie</div>
+      <div class="review">★★★★★ Snelle en duidelijke communicatie</div>
+      <div class="review">★★★★★ Absolute aanrader</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <p><strong>Cool en Heat Solutions</strong></p>
+      <p>Wiekevorst, provincie Antwerpen</p>
+      <p>info@coolenheat.be</p>
+      <p class="copyright">
+        © <span id="year"></span> Cool en Heat Solutions. Alle rechten voorbehouden.
+      </p>
+    </div>
+
+    <div class="socials">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <p>
+    Wij gebruiken cookies om de website correct te laten functioneren.
+  </p>
+  <button id="acceptCookies">Akkoord</button>
+</div>
+
+
+<script type="module" src="./js/file.js"></script>
+</body>
+</html>

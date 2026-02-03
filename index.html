@@ -28,12 +28,89 @@
       <a href="#location">Locatie</a>
       <a href="#contact">Contact</a>
     </nav>
-
+<div class="burger-contacts">
+           <li class="contacts-item"><a class="contacts-link" href="mailto:info@coolheatsolutions.be">info@coolheatsolutions.be</a></li>
+            <li class="contacts-item"><a class="contacts-link" href="tel:0451034362">0451/03.43.62</a></li>   
+   
+         </div>
+     <ul class="burger-list">
+                    <li class="burger-social">
+                       <a href="#" target="_blank" class="burger-socials-link"> 
+                     <svg class="burger-socials-icon" width="24" height="24">
+                          <use href="./images/icons.svg#icon-instagram"></use>
+                        </svg>
+                        </a>        
+                    </li>
+                    <li class="burger-social">
+                        <a href="#" target="_blank" class="burger-socials-link">
+                     <svg class="burger-socials-icon" width="24" height="24">
+                          <use href="./images/icons.svg#icon-facebook"></use>
+                        </svg> 
+                        </a>       
+                    </li>
+                    <li class="burger-social">
+                        <a href="#" target="_blank" class="burger-socials-link">
+                     <svg class="burger-socials-icon" width="24" height="24">
+                          <use href="./images/icons.svg#icon-linkedin"></use>
+                        </svg>
+                        </a>        
+                    </li>
+              
+                    </ul>    
     <div class="burger">
       <span></span><span></span><span></span>
     </div>
   </div>
 </header>
+
+<!-- MOBILE DRAWER MENU -->
+<div class="overlay" id="overlay" aria-hidden="true"></div>
+
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-top">
+    <div class="drawer-logo">Cool<span>en</span>Heat</div>
+
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+      ✕
+    </button>
+  </div>
+
+  <nav class="drawer-nav">
+    <a href="#about">Over ons</a>
+    <a href="#experience">Ervaring</a>
+    <a href="#location">Locatie</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="drawer-contacts">
+    <a class="telephone" href="tel:+32451034362">+32 (451) 03-43-62</a>
+    <a class="burger-contacts-items" href="mailto:info@coolheatsolutions.be">info@coolheatsolutions.be</a>
+  </div>
+
+  <ul class="drawer-socials">
+    <li>
+      <a href="#" target="_blank" class="burger-socials-link" aria-label="Instagram">
+        <svg class="burger-socials-icon" width="22" height="22">
+          <use href="./images/icons.svg#icon-instagram"></use>
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_blank" class="burger-socials-link" aria-label="Facebook">
+        <svg class="burger-socials-icon" width="22" height="22">
+          <use href="./images/icons.svg#icon-facebook"></use>
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_blank" class="burger-socials-link" aria-label="LinkedIn">
+        <svg class="burger-socials-icon" width="22" height="22">
+          <use href="./images/icons.svg#icon-linkedin"></use>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</aside>
 
 <!-- HERO -->
 <section class="hero" id="about">
@@ -45,6 +122,12 @@
       in woningen en bedrijven in heel Vlaanderen.
       Wij installeren airconditioningsystemen die stilte, efficiëntie
       en betrouwbaarheid combineren.
+      Als gecertificeerd airco & warmtepomp installateur met meer dan 20 jaar ervaring,
+      zijn we de perfecte partner wanneer u een airco of warmtepomp wil laten plaatsen. 
+      We hebben energie zuinige klimatisatie oplossingen voor particulieren en bedrijven. 
+      Als ervaren airco installateur is het voor ons een koud kunstje om uw installatie op een duurzame
+      en efficiënte manier te plaatsen . 
+      Herstellingen en onderhoud daar kan u uiteraard ook op ons rekenen met een uitgebreide service van Cool & Heat Solutions uit Wiekevorst.
     </p>
 
     <p>
@@ -57,41 +140,253 @@
 </section>
 
 <!-- EXPERIENCE -->
-<section class="experience" id="experience">
-  <div class="container experience-grid">
-    <div class="experience-text">
-      <h2>Meer dan 20 jaar vakmanschap</h2>
-      <p>
+ <section class="section-brends" >
+            <div class="container brends-container">
+                <h2 class="brends-title">
+                  Enkele merken waar we mee samen werken  
+                </h2>
+              <p>
         Onze ervaren installateurs werken uitsluitend met kwaliteitsmerken
         zoals <strong>Toshiba, Daikin, Mitsubishi en Sinclair</strong>.
       </p>
       <p>
         Elk project wordt zorgvuldig geanalyseerd en op maat uitgevoerd,
         met oog voor comfort, energie-efficiëntie en esthetiek.
-      </p>
-    </div>
+      </p>  
+                <ul class="brends-list">   
+                    <li class="brends-item">
+                        <img 
+                            src="./images/toshiba1x.jpg"
+                            srcset="./images/toshiba1x.jpg 1x, ./images/tosh2x.jpg 2x"
+                            alt=""
+                            height="260"
+                            width="264"
+                            class="team-item-image"
+                        >
 
-    <div class="image-placeholder">
-      Installatie foto
+                    </li>
+                    <li class="brends-item">
+                        <img 
+                            src="./images/sinc1x.jpg"
+                            srcset="./images/sinc1x.jpg 1x, ./images/sinc2x.jpg 2x" 
+                            alt=""
+                            height="260"
+                            width="264"  
+                             class="team-item-image" 
+                        >
+            
+                    </li>
+                    <li class="brends-item">
+                        <img 
+                            src="./images/mits1x.jpg"
+                            srcset="./images/mits1x.jpg 1x, ./images/mits2x.jpg 2x"
+                            alt=""
+                            height="260"
+                            width="264" 
+                            class="team-item-image"
+                        >
+                    </li>
+                    <li class="brends-item">
+                        <img 
+                            src="./images/daikin1x.jpg" 
+                            srcset="./images/daikin1x.jpg 1x, ./images/daikin2x.jpg 2x" 
+                            alt=""
+                            height="260"
+                            width="264" 
+                            class="team-item-image"
+                        >    
+                    </li>
+                </ul>
+                </div>    
+            </section>
+
+ <section class="section-experience">
+        <div class="container experience-container"> 
+        <h2 class="portfolio-title">
+                    PROJECTEN
+                </h2> 
+                
+                <ul class="portfolio-list">
+                    <li class="portfolio-item">
+        <div class="portfolio-item-images-container">
+                    <img 
+                            src="./images/exp11x.jpg"
+                            srcset="./images/exp11x.jpg 1x, ./images/exp12x.jpg 2x"
+                            alt="airco"
+                            height="300"
+                            width="360" 
+                            class="portfolio-item-images"
+                        >
+                    <p class="portfolio-item-image-text">Het gebruik van een airco-lift verhoogt zowel 
+                      de veiligheid als de efficiëntie op de werf. 
+                      Zware buitenunits kunnen gecontroleerd en zonder risico geplaatst worden, 
+                      waardoor schade en fysieke belasting voor onze technici tot een minimum worden beperkt. 
+                      Dit zorgt voor een professionele afwerking en een vlottere uitvoering van elk project.</p>    
+        </div>               
+        <div class="portfolio-item-description-container">               
+                    <h3 class="portfolio-item-title">Airco-lift</h3>
+                    <p class="portfolio-item-description">Stabroek</p>
+        </div>               
+                    </li>
+         
+                    <li class="portfolio-item" >
+        <div class="portfolio-item-images-container">               
+                     <img 
+                            src="./images/exp1x.jpg" 
+                            srcset="./images/exp1x.jpg 1x, ./images/exp1x.jpg 2x"
+                            alt="De daiseikai 10"
+                            height="300"
+                            width="360" 
+                            class="portfolio-item-images"
+                        >
+                    <p class="portfolio-item-image-text">De Toshiba Daiseikai 10 buitenunit onderscheidt zich door 
+                      zijn extreem lage geluidsniveau,
+                      uitstekende energie-efficiëntie en betrouwbare werking,
+                      zelfs bij lage buitentemperaturen. 
+                      Dankzij de geavanceerde inverter-technologie 
+                      en robuuste bouw levert hij duurzaam comfort met 
+                      een minimaal energieverbruik.</p>        
+        </div>                
+        <div class="portfolio-item-description-container">             
+                    <h3 class="portfolio-item-title">De daiseikai 10</h3>
+                    <p class="portfolio-item-description">Wijgmaal</p> 
+        </div>                
+                    </li>
+             
+                    <li class="portfolio-item" >
+        <div class="portfolio-item-images-container">                 
+                     <img 
+                            src="./images/exp21x.jpg"
+                            srcset="./images/exp21x.jpg 1x, ./images/exp22x.jpg 2x"
+                            alt="Sinclair Terrel"
+                            height="300"
+                            width="360" 
+                            class="portfolio-item-images"
+                        >
+                    <p class="portfolio-item-image-text">De Sinclair Terrel airco is een strak zwart design 
+                      toestel. 
+                      Dit stijlvol wandmodel is energiezuinig, 
+                      werkt fluisterstil en biedt functies zoals wifi-bediening, 
+                      geavanceerde plasma-reiniging voor zuivere, 
+                      frisse lucht. Dankzij zijn moderne uitstraling past hij perfect in hedendaagse interieurs, 
+                      terwijl hij efficiënt koelt,
+                      verwarmt, ontvochtigt en ventileert.</p>        
+        </div>                 
+        <div class="portfolio-item-description-container">                 
+                    <h3 class="portfolio-item-title">Sinclair Terrel</h3>
+                    <p class="portfolio-item-description">Geetbets</p>
+        </div>                     
+                    </li>
+        <li class="portfolio-item" >
+        <div class="portfolio-item-images-container">                 
+                     <img 
+                            src="./images/exp31x.jpg" 
+                            srcset="./images/exp31x.jpg 1x, ./images/exp32x.jpg 2x"
+                            alt="Sinclair"
+                            height="300"
+                            width="360" 
+                            class="portfolio-item-images"
+                        >
+                    <p class="portfolio-item-image-text">Professioneel geplaatst toestel van het merk Sinclair
+                       voor maximaal comfort en een strakke uitstraling:
+                       deze Sinclair-buitenunit werd netjes afgewerkt met weggewerkte leidingen
+                        en trillingsarme montage balken langs de gevel.</p>        
+        </div>                
+        <div class="portfolio-item-description-container">               
+                    <h3 class="portfolio-item-title">Sinclair</h3>
+                    <p class="portfolio-item-description">Scherpenheuvel - Zichem</p> 
+        </div>
+                    </li>
+              
+                    <li class="portfolio-item">
+        <div class="portfolio-item-images-container">                 
+                      <img 
+                            src="./images/exp41x.jpg"
+                            srcset="./images/exp41x.jpg 1x, ./images/exp42x.jpg 2x"
+                            alt="De Sinclair-binnenunit"
+                            height="300"
+                            width="360" 
+                            class="portfolio-item-images"
+                        >
+                    <p class="portfolio-item-image-text">De Sinclair-binnenunit is nauwkeurig gepositioneerd voor 
+                      een optimale luchtverdeling, 
+                      met correct weggewerkt leidingwerk en een nette afwerking. 
+                      De installatie garandeert een stille werking 
+                      en een efficiënte klimaatregeling in de leefruimte.</p>        
+        </div>                
+        <div class="portfolio-item-description-container">               
+                    <h3 class="portfolio-item-title">De Sinclair-binnenunit</h3>
+                    <p class="portfolio-item-description">Leuven</p> 
+        </div>                 
+                    </li>
+                       
+                    <li class="portfolio-item">
+        <div class="portfolio-item-images-container">                 
+                     <img 
+                            src="./images/exp51x.jpg"
+                             srcset="./images/exp51x.jpg 1x, ./images/exp52x.jpg 2x"
+                            alt="Toshiba-binnenunit"
+                            height="300"
+                            width="360" 
+                            class="portfolio-item-images"
+                        >
+                    <p class="portfolio-item-image-text">Discreet geïntegreerde Toshiba-binnenunit, 
+                      volledig weggewerkt in een maatwerkkast boven het wijnrek. 
+                      Deze installatie verenigt esthetiek en functionaliteit: onzichtbaar comfort, 
+                      stille werking en een optimale luchtverdeling — zonder het interieur te beïnvloeden.
+                        </p>        
+        </div>                
+        <div class="portfolio-item-description-container">                
+                    <h3 class="portfolio-item-title">Toshiba-binnenunit</h3>
+                    <p class="portfolio-item-description">Geel</p>  
+        </div>   
+                    </li>
+                </ul> 
+        </div>         
+    </section>                    
+
+<section id="location" class="location">
+  <div class="wrap">
+    <header class="head">
+      <h2 class="location-title">Locatie</h2>
+      <p>Wiekevorst, Belgium</p>
+    </header>
+
+    <div class="grid">
+      <!-- Info card -->
+      <div class="card">
+        <h3>Wiekevorst, Belgie</h3>
+
+        <ul class="meta">
+          <li><strong>Adres:</strong> Wiekevorst, 2222 (Heist-op-den-Berg), Belgie</li>
+          <li><strong>Uur:</strong> ma-zat: 08:00–18:00</li>
+          <li><strong>Zone:</strong> Provincie Antwerpen </li>
+        </ul>
+
+        <div class="actions">
+          <a class="btn primary" target="_blank" rel="noopener"
+             href="https://www.google.com/maps/search/?api=1&query=Wiekevorst%2C%20Belgium">
+            Route
+          </a>
+          <a class="btn" href="mailto:info@coolheatsolutions.be">info@coolheatsolutions.be</a>
+          <a class="btn" href="tel:+32451034362">+32 (451) 03-43-62</a>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="map">
+        <iframe
+          title="Map — Wiekevorst, Belgie"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Wiekevorst%2C%20Belgium&output=embed">
+        </iframe>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- LOCATION -->
-<section class="location" id="location">
-  <div class="container">
-    <h2>Actief in heel Vlaanderen</h2>
-    <p>
-      Vanuit <strong>Wiekevorst (Antwerpen)</strong> bedienen wij klanten
-      in de volledige Vlaamse regio.
-    </p>
 
-    <iframe
-      src="https://www.google.com/maps?q=Wiekevorst,Antwerpen&output=embed"
-      loading="lazy">
-    </iframe>
-  </div>
-</section>
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
@@ -144,24 +439,57 @@
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
-  <div class="container footer-grid">
-    <div>
-      <p><strong>Cool en Heat Solutions</strong></p>
-      <p>Wiekevorst, provincie Antwerpen</p>
-      <p>info@coolenheat.be</p>
-      <p class="copyright">
-        © <span id="year"></span> Cool en Heat Solutions. Alle rechten voorbehouden.
-      </p>
+<footer class="site-footer">
+  <div class="footer-container">
+ <div class="footer-logo">
+   <img 
+                            src="./images/footer1x.jpg" 
+                            srcset="./images/footer1x.jpg 1x, ./images/footer2x.jpg 2x"
+                            alt="logo"
+                            height="300"
+                            width="360" 
+                            class="logo-item"
+                        >
+     
     </div>
 
-    <div class="socials">
-      <a href="#">Facebook</a>
-      <a href="#">Instagram</a>
-      <a href="#">LinkedIn</a>
+     <p class="footer-text">
+        Cool en Heeat Solutions uit Wiekevorst is jouw aanspreekpunt voor airco,
+        waterpompen en ventilatie.
+      </p>
+   <div class="footer-socials">
+        <a href="#" aria-label="Facebook">
+          <svg class="footer-socials-icon" width="24" height="24">
+                          <use href="./images/icons.svg#icon-facebook"></use>
+                        </svg> 
+        </a>
+        <a href="#" aria-label="Instagram">
+<svg class="footer-socials-icon" width="24" height="24">
+                          <use href="./images/icons.svg#icon-instagram"></use>
+                        </svg>  
+        </a>
+      </div>
     </div>
+    
+  </div>
+  </div>
+
+  <!-- Contact -->
+ <div class="footer-contact">
+  <address>
+    <span>📍 Wiekevorst</span><br>
+    <span>📞 0451 03 43 62</span><br>
+    <span>✉️ info@coolheatsolutions.be</span>
+  </address>
+</div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    © 2026 Alle rechten voorbehouden
   </div>
 </footer>
+
+
 
 <!-- COOKIE BANNER -->
 <div class="cookie-banner" id="cookieBanner">

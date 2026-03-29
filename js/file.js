@@ -1,106 +1,140 @@
 // js/file.js
 
-// =========================
-// Cookie banner
-// =========================
-const cookieBanner = document.getElementById("cookieBanner");
-const acceptCookiesBtn = document.getElementById("acceptCookies");
-const COOKIE_KEY = "chs_cookies_accepted";
+document.addEventListener("DOMContentLoaded", () => {
 
-function showCookieBannerIfNeeded() {
-  try {
-    const accepted = localStorage.getItem(COOKIE_KEY);
-    if (!accepted && cookieBanner) {
-      cookieBanner.style.display = "flex";
-    }
-  } catch (err) {
-    // Якщо localStorage заблокований — просто показати банер
-    if (cookieBanner) cookieBanner.style.display = "flex";
-  }
-}
+  // =========================
+  // Cookie banner
+  // =========================
+  const cookieBanner = document.getElementById("cookieBanner");
+  const acceptCookiesBtn = document.getElementById("acceptCookies");
+  const COOKIE_KEY = "chs_cookies_accepted";
 
-if (acceptCookiesBtn) {
-  acceptCookiesBtn.addEventListener("click", () => {
+  function showCookieBannerIfNeeded() {
     try {
-      localStorage.setItem(COOKIE_KEY, "1");
-    } catch (err) {}
-    if (cookieBanner) cookieBanner.style.display = "none";
+      const accepted = localStorage.getItem(COOKIE_KEY);
+      if (!accepted && cookieBanner) {
+        cookieBanner.classList.add("visible");
+      }
+    } catch (err) {
+      if (cookieBanner) cookieBanner.classList.add("visible");
+    }
+  }
+
+  if (acceptCookiesBtn) {
+    acceptCookiesBtn.addEventListener("click", () => {
+      try {
+        localStorage.setItem(COOKIE_KEY, "1");
+      } catch (err) {}
+      if (cookieBanner) cookieBanner.classList.remove("visible");
+    });
+  }
+
+  showCookieBannerIfNeeded();
+
+
+  // =========================
+  // Drawer burger menu
+  // =========================
+  const burger = document.querySelector(".burger");
+  const overlay = document.getElementById("overlay");
+  const drawer = document.getElementById("drawer");
+  const drawerClose = document.getElementById("drawerClose");
+
+  function lockScroll(lock) {
+    document.body.classList.toggle("no-scroll", lock);
+  }
+
+  function isDrawerOpen() {
+    return drawer && drawer.classList.contains("is-open");
+  }
+
+  function openDrawer() {
+    if (!burger || !overlay || !drawer) return;
+
+    burger.classList.add("active");
+    burger.setAttribute("aria-expanded", "true");
+
+    overlay.classList.add("is-open");
+    drawer.classList.add("is-open");
+
+    overlay.setAttribute("aria-hidden", "false");
+    drawer.setAttribute("aria-hidden", "false");
+
+    lockScroll(true);
+
+    // focus for accessibility
+    drawer.focus();
+  }
+
+  function closeDrawer() {
+    if (!burger || !overlay || !drawer) return;
+
+    burger.classList.remove("active");
+    burger.setAttribute("aria-expanded", "false");
+
+    overlay.classList.remove("is-open");
+    drawer.classList.remove("is-open");
+
+    overlay.setAttribute("aria-hidden", "true");
+    drawer.setAttribute("aria-hidden", "true");
+
+    lockScroll(false);
+  }
+
+  // Toggle
+  if (burger) {
+    burger.addEventListener("click", (e) => {
+      e.preventDefault();
+      isDrawerOpen() ? closeDrawer() : openDrawer();
+    });
+  }
+
+  // Close button
+  if (drawerClose) {
+    drawerClose.addEventListener("click", closeDrawer);
+  }
+
+  // Overlay click
+  if (overlay) {
+    overlay.addEventListener("click", closeDrawer);
+  }
+
+  // Click outside (extra safety)
+  document.addEventListener("click", (e) => {
+    if (
+      isDrawerOpen() &&
+      drawer &&
+      !drawer.contains(e.target) &&
+      burger &&
+      !burger.contains(e.target)
+    ) {
+      closeDrawer();
+    }
   });
-}
 
-showCookieBannerIfNeeded();
-
-
-// =========================
-// Drawer burger menu
-// (overlay + close button + ESC + click outside)
-// =========================
-const burger = document.querySelector(".burger");
-const overlay = document.getElementById("overlay");
-const drawer = document.getElementById("drawer");
-const drawerClose = document.getElementById("drawerClose");
-
-function lockScroll(lock) {
-  document.body.style.overflow = lock ? "hidden" : "";
-}
-
-function openDrawer() {
-  if (!burger || !overlay || !drawer) return;
-
-  burger.classList.add("active");
-  overlay.classList.add("is-open");
-  drawer.classList.add("is-open");
-
-  overlay.setAttribute("aria-hidden", "false");
-  drawer.setAttribute("aria-hidden", "false");
-
-  lockScroll(true);
-}
-
-function closeDrawer() {
-  if (!burger || !overlay || !drawer) return;
-
-  burger.classList.remove("active");
-  overlay.classList.remove("is-open");
-  drawer.classList.remove("is-open");
-
-  overlay.setAttribute("aria-hidden", "true");
-  drawer.setAttribute("aria-hidden", "true");
-
-  lockScroll(false);
-}
-
-function isDrawerOpen() {
-  return !!drawer?.classList.contains("is-open");
-}
-
-// Toggle on burger click
-if (burger) {
-  burger.addEventListener("click", (e) => {
-    e.preventDefault();
-    isDrawerOpen() ? closeDrawer() : openDrawer();
+  // ESC key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isDrawerOpen()) {
+      closeDrawer();
+    }
   });
-}
 
-// Close button
-if (drawerClose) drawerClose.addEventListener("click", closeDrawer);
+  // Close on link click
+  if (drawer) {
+    drawer.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeDrawer);
+    });
+  }
 
-// Click on overlay closes
-if (overlay) overlay.addEventListener("click", closeDrawer);
-
-// ESC closes
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && isDrawerOpen()) closeDrawer();
-});
-
-// Clicking a link inside drawer closes
-if (drawer) {
-  drawer.querySelectorAll("a").forEach((a) => {
-    a.addEventListener("click", closeDrawer);
+  // Resize debounce
+  let resizeTimeout;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      if (window.innerWidth >= 769 && isDrawerOpen()) {
+        closeDrawer();
+      }
+    }, 150);
   });
-}
 
-// Safety: if window resized to desktop, close drawer
-window.addEventListener("resize", () => {
-  if (window.innerWidth >= 769 && isDrawerOpen()) closeDrawer();
 });

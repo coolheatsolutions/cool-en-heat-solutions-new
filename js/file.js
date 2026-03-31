@@ -138,3 +138,28 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const btn = document.getElementById("callBtn");
+
+    if (btn) {
+        btn.addEventListener("click", function() {
+            const phoneNumber = "+32451034362";
+
+            const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+            if (isMobile) {
+                window.location.href = "tel:+32451034362" + +32451034362;
+            } else {
+                navigator.clipboard.writeText(phoneNumber)
+                    .then(() => {
+                        alert("nummer gekopieerd: " + +32451034362);
+                    })
+                    .catch(() => {
+                        alert("+32451034362: " + +32451034362);
+                    });
+            }
+        });
+    }
+});

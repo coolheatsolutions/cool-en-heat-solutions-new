@@ -140,52 +140,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    const btn = document.getElementById("callBtn");
-
-    if (btn) {
-        btn.addEventListener("click", function() {
-            const phoneNumber = "+32451034362";
-
-            const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-            if (isMobile) {
-                window.location.href = "tel:+32451034362";
-            } else {
-                navigator.clipboard.writeText(phoneNumber)
-                    .then(() => {
-                        alert("nummer gekopieerd: ");
-                    })
-                    .catch(() => {
-                        alert("+32451034362: ");
-                    });
-            }
-        });
-    }
-});
 
 
-document.getElementById("callBtn").addEventListener("click", function() {
-    window.location.href = "tel:+32451034362";
-});
-
-
-import Accordion from 'accordion-js';
-import 'accordion-js/dist/accordion.min.css';
-
-export function initFaqAccordion() {
-  const container = document.querySelector('.accordion-container');
-
-  if (container) {
-    new Accordion(container, {
-      duration: 400,
-      showMultiple: false,
-      collapse: true,
-      elementClass: 'ac',
-      triggerClass: 'ac-trigger',
-      panelClass: 'ac-panel',
-    });
-  }
-}
-
-initFaqAccordion();
